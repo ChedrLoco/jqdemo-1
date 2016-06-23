@@ -10,7 +10,12 @@ function fetch() {
     method: 'get',
     dataType: 'json',
     success: function(rsp){
-      console.log('data:', rsp);
+      let games = rsp.top;
+      games.forEach(g => {
+        let name = g.game.name;
+        let art = g.game.box.medium;
+        $('#games').append(`<div><p>${name}</p><img src="${art}"></div>`);
+      });
     }
   });
 }

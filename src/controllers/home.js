@@ -18,3 +18,7 @@ router.get('/faq', (req, res) => {
 router.get('/twitch', (req, res) => {
   res.render('home/twitch');
 });
+
+router.get('/coins', (req, res) => {
+  res.render('home/coins');
+});
